@@ -1,16 +1,24 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Hero from '../sections/Hero';
+import Services from '../sections/Services';
+import WhyChooseUs from '../sections/WhyChooseUs';
+import Portfolio from '../sections/Portfolio';
+import Testimonials from '../sections/Testimonials';
+import CTA from '../sections/CTA';
+import Footer from '../components/Footer.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="MinkayTec | Desarrollo de Software a Medida">
+	<Navbar client:load />
+	<main>
+		<Hero client:load />
+		<Services client:visible />
+		<WhyChooseUs client:visible />
+		<Portfolio client:visible />
+		<Testimonials client:visible />
+		<CTA client:visible />
+	</main>
+	<Footer />
+</Layout>
