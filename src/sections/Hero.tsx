@@ -1,11 +1,13 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Code, Monitor, Terminal } from 'lucide-react';
+import MatrixEffect from '../components/MatrixEffect';
 
 export default function Hero() {
     return (
         <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
             {/* Background Elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <MatrixEffect />
                 <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl mix-blend-screen animate-blob" />
                 <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl mix-blend-screen animate-blob animation-delay-2000" />
                 <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl mix-blend-screen animate-blob animation-delay-4000" />

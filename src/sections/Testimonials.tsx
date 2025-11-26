@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Quote } from 'lucide-react';
+import NetworkBackground from '../components/NetworkBackground';
 
 const testimonials = [
     {
@@ -22,6 +23,7 @@ const testimonials = [
 export default function Testimonials() {
     return (
         <section id="testimonials" className="py-24 relative overflow-hidden">
+            <NetworkBackground />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
@@ -37,7 +39,7 @@ export default function Testimonials() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 relative"
+                            className="p-8 rounded-2xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm border border-slate-200 dark:border-slate-800 relative"
                         >
                             <Quote className="absolute top-8 right-8 text-blue-100 dark:text-blue-900/30 w-12 h-12" />
                             <p className="text-slate-600 dark:text-slate-300 mb-6 relative z-10 italic">

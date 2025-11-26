@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Code2 } from 'lucide-react';
-import ThemeToggle from './ThemeToggle';
+
 
 const navLinks = [
     { name: 'Servicios', href: '#services' },
@@ -52,12 +52,12 @@ export default function Navbar() {
                             <a href="#contact" className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full text-sm font-medium transition-colors shadow-lg shadow-blue-600/20 hover:shadow-blue-600/40 transform hover:-translate-y-0.5">
                                 Cotizar
                             </a>
-                            <ThemeToggle />
+
                         </div>
                     </div>
 
                     <div className="md:hidden flex items-center gap-4">
-                        <ThemeToggle />
+
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             className="inline-flex items-center justify-center p-2 rounded-md text-slate-700 dark:text-slate-200 hover:text-blue-600 focus:outline-none"
